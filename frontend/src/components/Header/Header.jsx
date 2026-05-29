@@ -1,20 +1,6 @@
 import { useEffect, useState } from "react";
 
 function Header() {
-  const [input, setInput] = useState();
-  const [user, setUser] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState([]);
-
-  async function getProfile() {
-    try {
-      const res = await fetch("http://localhost:3000/auth/v1/me");
-      const data = await res.json()
-    } catch (error) {
-      setError(error);
-      setLoading(false);
-    }
-  }
   return (
     <>
       <header>
