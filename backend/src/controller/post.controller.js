@@ -1,4 +1,5 @@
 import Post from "../models/Post.js";
+import { uploadToCloudinary } from "../utils/uploadToCloudinary.js";
 
 export const createPost = async (req, res) => {
   try {
@@ -37,7 +38,8 @@ export const createPost = async (req, res) => {
     console.log("Error Creating Post:", error);
     return res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Internal Server Error",
+      error: error.message,
       status_code: 500,
     });
   }

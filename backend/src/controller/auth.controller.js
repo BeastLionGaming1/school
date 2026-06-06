@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import User from "../models/User.js";
+import Post from "../models/Post.js";
 import { ENV } from "../lib/env.js";
 
 export const signup = async (req, res) => {
@@ -170,18 +171,23 @@ export const getMe = async (req, res) => {
 
 export const getUserProfile = async (req, res) => {
   try {
-    const user = await User.findById(
-      req.params.id
-    ).select("-password");
+    const user = await User.findById(req.params.id);
+
+    const posts = await Post.find({
+      author: req.params.id,
+    });
 
     if (!user) {
       return res.status(404).json({
-        message: "User not found",
+        success: false,
+        message: "User Not fFound",
+        status_code: 404,
       });
     }
 
     res.status(200).json({
       user,
+      posts,
     });
   } catch (error) {
     console.log("Get Profile Error:", error);

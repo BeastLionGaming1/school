@@ -6,6 +6,7 @@ import Chat from "./pages/Chat.jsx";
 import Profile from "./pages/Profile.jsx";
 import Create from "./pages/Create.jsx";
 import Notification from "./pages/Notification.jsx";
+import "./App.css";
 
 function App() {
   return (

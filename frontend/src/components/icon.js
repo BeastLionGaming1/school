@@ -15,7 +15,7 @@ import Emoji from "../assets/emoji.svg";
 import share from "../assets/share.svg";
 import send from "../assets/send.svg";
 import like from "../assets/like.svg";
-import likeFilled from "../asset/like_filled.svg";
+import likeFilled from "../assets/like_filled.svg";
 import Notification from "../assets/notification.svg";
 import Video from "../assets/video.svg";
 import Home from "../assets/home.svg";

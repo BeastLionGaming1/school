@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 70px;
+  width: calc(100% - 40px);
+  gap: 5px;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top textarea {
+  height: 30px;
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+} 
